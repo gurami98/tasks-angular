@@ -1,0 +1,57 @@
+<form [formGroup]="form" class="register-form" [autocomplete]="false">
+  <h1>Task 1</h1>
+  <h1>Registration</h1>
+
+  <label class='required'>
+    E-mail:
+    <input formControlName="email" type="email" placeholder="email" required>
+  </label>
+  <p *ngIf="form.controls['email'].errors?.required && form.controls['email'].touched ">Email is Required</p>
+  <p *ngIf="form.controls['email'].errors?.pattern">Email is not Valid</p>
+
+  <label class='required'>
+    Password:
+    <input formControlName="password" type="password" placeholder="******" required>
+  </label>
+  <p *ngIf="form.controls['password'].errors?.required && form.controls['password'].touched ">Password is Required</p>
+  <p *ngIf="form.controls['password'].errors?.pattern">Password is not Valid</p>
+
+  <label class='required'>
+    Confirm Password:
+    <input formControlName="confirmPassword" type="password" placeholder="******" required>
+  </label>
+
+  <label class='required'>
+    Nickname:
+    <input formControlName="nickname" type="text" placeholder="nickname" required>
+  </label>
+  <p *ngIf="form.controls['nickname'].errors?.required && form.controls['nickname'].touched ">Nickname is Required</p>
+  <p *ngIf="form.controls['nickname'].errors?.pattern">Nickname is not Valid</p>
+
+  <label class='required'>
+    Phone Number:
+    <input formControlName="phone" type="tel" placeholder="phone number" required>
+  </label>
+  <p *ngIf="form.controls['phone'].errors?.required && form.controls['phone'].touched ">Phone is Required</p>
+  <p *ngIf="form.controls['phone'].errors?.pattern">Phone is not Valid</p>
+
+  <label class='required'>
+    Website:
+    <input formControlName="website" type="url" placeholder="website" required>
+  </label>
+  <p *ngIf="form.controls['website'].errors?.required && form.controls['website'].touched ">Website is Required</p>
+  <p *ngIf="form.controls['website'].errors?.pattern">Website is not Valid</p>
+
+  <label>
+    <input formControlName="agreement" type="checkbox" required>
+    I have read the <a href="#">agreement</a>
+  </label>
+  <p *ngIf="form.controls['agreement'].errors?.required && form.controls['agreement'].touched ">Accepting agreement is Required</p>
+
+  <button (click)="submitForm()" [className]="buttonStatus" [disabled]="buttonStatus!='buttonEnabled'">Register</button>
+</form>
+
+<!--should be deleted -->
+<ul>
+  <li *ngFor="let user of userData">{{ user | json}}</li>
+</ul>
