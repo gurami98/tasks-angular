@@ -5,7 +5,17 @@ import {Person} from "./PersonInterface";
   providedIn: 'root'
 })
 export class UserDataManagerServiceService {
-  data: Person[] = []
+  data: Person[] = [
+    {
+      id: 1,
+      email: 'chillin@gmail.com',
+      password: '1234567',
+      confirmPassword: '1234567',
+      nickname: 'chilling220',
+      phone: '+380123456789',
+      website: 'website.com'
+    }
+  ]
   constructor() { }
 
   addPerson(person: Person) {

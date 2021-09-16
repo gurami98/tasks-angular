@@ -2,12 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 30px;
+  gap: 15px;
   width: fit-content;
+  margin: 0 auto;
+  min-width: 450px;
 
-  & div p {
+  & p {
     margin: 0;
-    padding: 10px;
+    color: red;
   }
 
   & .required input{

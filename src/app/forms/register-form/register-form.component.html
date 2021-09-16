@@ -7,40 +7,42 @@
     <input formControlName="email" type="email" placeholder="email" required>
   </label>
   <p *ngIf="form.controls['email'].errors?.required && form.controls['email'].touched ">Email is Required</p>
-  <p *ngIf="form.controls['email'].errors?.pattern">Email is not Valid</p>
+  <p *ngIf="form.controls['email'].errors?.pattern && form.controls['email'].touched">Email is not Valid</p>
 
   <label class='required'>
     Password:
     <input formControlName="password" type="password" placeholder="******" required>
   </label>
   <p *ngIf="form.controls['password'].errors?.required && form.controls['password'].touched ">Password is Required</p>
-  <p *ngIf="form.controls['password'].errors?.pattern">Password is not Valid</p>
+  <p *ngIf="form.controls['password'].errors?.minlength && form.controls['password'].touched ">Password needs to be at least 7 characters long</p>
+  <p *ngIf="form.controls['password'].errors?.pattern && form.controls['password'].touched ">Password is not Valid</p>
 
   <label class='required'>
     Confirm Password:
     <input formControlName="confirmPassword" type="password" placeholder="******" required>
   </label>
+  <p *ngIf="form.errors?.notSame && form.controls['confirmPassword'].touched">Passwords need to match</p>
 
   <label class='required'>
     Nickname:
     <input formControlName="nickname" type="text" placeholder="nickname" required>
   </label>
   <p *ngIf="form.controls['nickname'].errors?.required && form.controls['nickname'].touched ">Nickname is Required</p>
-  <p *ngIf="form.controls['nickname'].errors?.pattern">Nickname is not Valid</p>
+  <p *ngIf="form.controls['nickname'].errors?.pattern && form.controls['nickname'].touched">Nickname should only contain letters and dash</p>
 
   <label class='required'>
     Phone Number:
     <input formControlName="phone" type="tel" placeholder="phone number" required>
   </label>
   <p *ngIf="form.controls['phone'].errors?.required && form.controls['phone'].touched ">Phone is Required</p>
-  <p *ngIf="form.controls['phone'].errors?.pattern">Phone is not Valid</p>
+  <p *ngIf="form.controls['phone'].errors?.pattern && form.controls['phone'].touched ">Phone needs to start with +380 and should have only 12 digits</p>
 
   <label class='required'>
     Website:
     <input formControlName="website" type="url" placeholder="website" required>
   </label>
   <p *ngIf="form.controls['website'].errors?.required && form.controls['website'].touched ">Website is Required</p>
-  <p *ngIf="form.controls['website'].errors?.pattern">Website is not Valid</p>
+  <p *ngIf="form.controls['website'].errors?.pattern && form.controls['website'].touched ">Website is not Valid</p>
 
   <label>
     <input formControlName="agreement" type="checkbox" required>
@@ -50,8 +52,3 @@
 
   <button (click)="submitForm()" [className]="buttonStatus" [disabled]="buttonStatus!='buttonEnabled'">Register</button>
 </form>
-
-<!--should be deleted -->
-<ul>
-  <li *ngFor="let user of userData">{{ user | json}}</li>
-</ul>
