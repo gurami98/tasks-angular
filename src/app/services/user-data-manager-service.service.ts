@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Person} from "./PersonInterface";
+import {Person} from "../PersonInterface";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,16 @@ export class UserDataManagerServiceService {
       email: 'chillin@gmail.com',
       password: '1234567',
       confirmPassword: '1234567',
-      nickname: 'chilling220',
+      nickname: 'chillin220',
+      phone: '+380123456789',
+      website: 'website.com'
+    },
+    {
+      id: 2,
+      email: 'test@gmail.com',
+      password: '1234567',
+      confirmPassword: '1234567',
+      nickname: 'nicenicknamebro',
       phone: '+380123456789',
       website: 'website.com'
     }
@@ -22,18 +31,17 @@ export class UserDataManagerServiceService {
     this.data.push({...person, id: this.data.length > 0 ? this.data[this.data.length - 1].id + 1 : 1})
   }
 
-  getById(id: number): Person | null {
+  getCurrentById(id: number): Person | null {
     return this.data.filter(p => p.id == id)[0];
   }
 
   deletePerson(id: number) {
     this.data = this.data.filter(d => d.id != id);
-    return this.data;
   }
 
   updatePerson(person: Person){
     this.data = this.data.map(p => {
-      return p.id == person.id ? person : p
+      return p.id === person.id ? person : p
     })
   }
 }

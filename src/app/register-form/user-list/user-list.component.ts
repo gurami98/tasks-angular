@@ -1,6 +1,6 @@
-import {Component, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Person} from "../../PersonInterface";
-import {UserDataManagerServiceService} from "../../user-data-manager-service.service";
+import {UserDataManagerServiceService} from "../../services/user-data-manager-service.service";
 
 @Component({
   selector: 'app-user-list',
@@ -8,11 +8,13 @@ import {UserDataManagerServiceService} from "../../user-data-manager-service.ser
   styleUrls: ['./user-list.component.scss']
 })
 export class UserListComponent implements OnInit {
+  @Input() currentPerson: Person | null = null;
+  @Input() scrollEl: any;
+  @Output() currentPersonChange: EventEmitter<Person | null> = new EventEmitter<Person | null>();
+
   get usersList(): Person[] {
     return this.userDataManagerService.data;
   }
-
-  @Output() currentPerson: Person | null = null;
 
   constructor(private userDataManagerService: UserDataManagerServiceService) { }
 
@@ -24,12 +26,11 @@ export class UserListComponent implements OnInit {
   }
 
   editUser(id: number) {
-    this.currentPerson = this.userDataManagerService.getById(id);
-    console.log(this.currentPerson)
+    this.scrollEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.currentPersonChange.emit(this.userDataManagerService.getCurrentById(id));
   }
 
   ngOnInit(): void {
 
   }
-
 }
