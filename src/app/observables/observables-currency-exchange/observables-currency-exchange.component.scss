@@ -1,0 +1,26 @@
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 30px;
+
+  select{
+    height: 32px;
+    border-top-left-radius: 120px;
+    border-bottom-left-radius: 120px;
+    width: 60px;
+    outline: none;
+    border: 1px solid #8080f1;
+  }
+
+  input{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    height: 30px;
+    border: 1px solid #8080f1;
+    border-bottom-right-radius: 120px;
+    border-top-right-radius: 120px;
+    text-indent: 5px;
+  }
+}

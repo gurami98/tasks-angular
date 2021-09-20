@@ -18,6 +18,6 @@
     <select name="secondCurrency" formControlName="selectedCurrency2">
       <option *ngFor="let curr of currencyNames" [value]="curr">{{curr}}</option>
     </select>
-    <input type="number" formControlName="currencyAmount2"  placeholder="enter amount" required onkeydown="return event.keyCode !== 69">
+    <input type="number" formControlName="currencyAmount2"  placeholder="enter amount" readonly required onkeydown="return event.keyCode !== 69">
   </div>
 </form>
