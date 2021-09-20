@@ -13,7 +13,7 @@ const API_KEY = 'api_key=2f562a17e1-3e1a4b24a0-qznkk6'
 })
 export class ObservablesCurrencyExchangeFormarrayComponent implements OnInit {
   form
-  currencyNames: any[] = []
+  currencyNames: string[] = []
   sum: number = 0
   get allCurrencies() : FormArray {
     return this.form.get("currencies") as FormArray
