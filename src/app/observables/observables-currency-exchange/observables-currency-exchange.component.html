@@ -1,0 +1,14 @@
+<h1>Task 1 & 2</h1>
+
+<form [formGroup]="form">
+  <select name="firstCurrency" id="firstCurrency" formControlName="selectedCurrency1">
+    <option *ngFor="let curr of currencies" [value]="curr">{{curr}}</option>
+  </select>
+  <input type="number" formControlName="currencyAmount1" placeholder="enter amount" required onkeydown="return event.keyCode !== 69">
+
+  <select name="secondCurrency" id="secondCurrency" formControlName="selectedCurrency2">
+    <option *ngFor="let curr of currencies" [value]="curr">{{curr}}</option>
+  </select>
+  <input type="number" formControlName="currencyAmount2"  placeholder="enter amount" required onkeydown="return event.keyCode !== 69">
+</form>
+

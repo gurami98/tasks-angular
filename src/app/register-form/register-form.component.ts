@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, Validators} from "@angular/forms";
 import {tap} from "rxjs/operators";
-import {UserDataManagerServiceService} from "../services/user-data-manager-service.service";
-import {Person} from "../PersonInterface";
-import {PasswordMatchValidatorServiceService} from "../services/password-match-validator-service.service";
+import {UserDataManagerServiceService} from "./services/user-data-manager-service.service";
+import {Person} from "./PersonInterface";
+import {PasswordMatchValidatorServiceService} from "./services/password-match-validator-service.service";
 
 @Component({
   selector: 'app-register-form',
