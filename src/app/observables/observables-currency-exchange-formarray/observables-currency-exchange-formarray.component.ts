@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormArray, FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
-import {tap} from "rxjs/operators";
+import {debounceTime, tap} from "rxjs/operators";
 
 const API_URL = 'https://api.fastforex.io'
 const API_KEY = 'api_key=2f562a17e1-3e1a4b24a0-qznkk6'
@@ -62,6 +62,7 @@ export class ObservablesCurrencyExchangeFormarrayComponent implements OnInit {
       )
     ).subscribe()
     this.form.get('currencies')?.valueChanges.pipe(
+      debounceTime(500),
       tap( (value) => {
         for (let i = 0; i < value.length; i++){
           this.convertCurrency(value[i]?.selectedCurrency, value[i].currencyAmount)
