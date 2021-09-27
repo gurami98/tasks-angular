@@ -11,7 +11,11 @@ export class EmployeeDataManagerServiceService {
   data: any
 
   constructor(private http: HttpClient) {
-    this.http.get(`${environment.api}/employees`).subscribe(resp => this.data = resp)
+    try {
+      this.http.get(`${environment.api}/employees`).subscribe(resp => this.data = resp)
+    }catch (e){
+      alert(e.message)
+    }
   }
 
   addEmployee(employee: Employee) {
@@ -28,7 +32,7 @@ export class EmployeeDataManagerServiceService {
 
   deleteEmployee(id: number | undefined) {
     try {
-      this.http.get(`${environment.api}/employees`).subscribe(resp => this.data = resp)
+      this.http.delete(`${environment.api}/employees/${id}`).subscribe()
       this.data = this.data.filter((d: Employee) => d.id != id);
     }catch (e){
       alert(e.message)
@@ -36,8 +40,14 @@ export class EmployeeDataManagerServiceService {
   }
 
   updateEmployee(person: Employee, id: number | undefined){
-    // this.data = this.data.map(p => {
-    //   return p.id === person.id ? person : p
-    // })
+    try {
+      this.http.put(`${environment.api}/employees/${id}`, person).subscribe(resp => {
+        this.data = this.data.map((p: Employee) => {
+          return p.id === id ? resp : p
+        })
+      })
+    }catch (e){
+      alert(e.message)
+    }
   }
 }

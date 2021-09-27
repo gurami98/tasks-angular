@@ -38,14 +38,6 @@ export class EmployeeRegisterComponent implements OnInit {
       }
       this.form.reset()
       this.currentEmployee = null
-    }else{
-      // show errors in case form is invalid on submit
-      Object.keys(this.form.controls).forEach(field => {
-        const control = this.form.get(field);
-        if (control instanceof FormControl) {
-          control.markAsTouched({ onlySelf: true });
-        }
-      });
     }
   }
 

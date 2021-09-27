@@ -9,6 +9,8 @@ import { ObservablesCurrencyExchangeComponent } from './observables/observables-
 import {HttpClientModule} from "@angular/common/http";
 import { ObservablesComponent } from './observables/observables.component';
 import { ObservablesCurrencyExchangeFormarrayComponent } from './observables/observables-currency-exchange-formarray/observables-currency-exchange-formarray.component';
+import { EmployeeRegisterComponent } from './employee-register/employee-register.component';
+import { EmployeeListComponent } from './employee-register/employee-list/employee-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ObservablesCurrencyExchangeFormarrayComponent } from './observables/obs
     UserListComponent,
     ObservablesCurrencyExchangeComponent,
     ObservablesComponent,
-    ObservablesCurrencyExchangeFormarrayComponent
+    ObservablesCurrencyExchangeFormarrayComponent,
+    EmployeeRegisterComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
