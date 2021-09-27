@@ -8,7 +8,7 @@ import {environment} from "../../../environments/environment";
 })
 export class EmployeeDataManagerServiceService {
 
-  data: any
+  data: Employee[] | any = null
 
   constructor(private http: HttpClient) {
     try {
