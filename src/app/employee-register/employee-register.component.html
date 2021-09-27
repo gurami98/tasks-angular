@@ -1,0 +1,32 @@
+<h1 style="text-align: center">Employee Register</h1>
+<div class="main-form-container">
+  <form [formGroup]="form" class="register-form" [autocomplete]="false" #target>
+    <h1>{{currentEmployee? 'Editing User' : 'Registration'}}</h1>
+
+    <label class='required'>
+      Name:
+      <input formControlName="name" type="text" placeholder="name" required>
+    </label>
+    <p *ngIf="form.controls['name'].errors?.required && form.controls['name'].touched ">Name is Required</p>
+
+    <label class='required'>
+      Salary:
+      <input formControlName="salary" type="number" placeholder="salary" required>
+    </label>
+    <p *ngIf="form.controls['salary'].errors?.required && form.controls['salary'].touched ">Salary is Required</p>
+
+    <label class='required'>
+      Age:
+      <input formControlName="age" type="number" placeholder="age" required>
+    </label>
+    <p *ngIf="form.controls['age'].errors?.required && form.controls['age'].touched ">Age is Required</p>
+
+    <div class="form-button-container">
+      <button (click)="submitForm()" [className]="buttonStatus" [disabled]="buttonStatus!='buttonEnabled'">{{currentEmployee ? 'Save' : 'Register'}}</button>
+      <button (click)="resetForm()" class="buttonEnabled" *ngIf="currentEmployee">Cancel</button>
+    </div>
+  </form>
+
+  <app-employee-list [scrollEl]="target" [currentEmployee]="currentEmployee" (currentEmployeeChange)="handleCurrentEmployeeChange($event)"></app-employee-list>
+
+</div>

@@ -1,0 +1,22 @@
+<div class="header">
+  <h1>Employees</h1>
+</div>
+<div class="user-list-container">
+
+  <div class="user" *ngFor="let employee of employeesList">
+    <h1>Employee {{employee.id}}</h1>
+    <ul>
+      <li>ID: <span>{{employee.id}}</span></li>
+      <li>Name: <span>{{employee.name}}</span></li>
+      <li>Salary: <span>{{employee.salary}}</span></li>
+      <li>Age: <span>{{employee.age}}</span></li>
+    </ul>
+    <div class="user-actions">
+      <button class="edit-btn" (click)="editUser(employee?.id)">Edit</button>
+      <button class="delete-btn" (click)="deleteUser(employee?.id)">Delete</button>
+    </div>
+  </div>
+
+
+</div>
+
