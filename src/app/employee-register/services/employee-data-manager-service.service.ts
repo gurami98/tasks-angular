@@ -30,6 +30,15 @@ export class EmployeeDataManagerServiceService {
     return this.data.filter((p: Employee) => p.id == id)[0]
   }
 
+  findById(id: number | undefined){
+    try {
+      return this.http.get(`${environment.api}/employees/${id}`)
+    }catch (e){
+      alert(e.message)
+      return null
+    }
+  }
+
   deleteEmployee(id: number | undefined) {
     try {
       this.http.delete(`${environment.api}/employees/${id}`).subscribe()

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {tap} from "rxjs/operators";
 import {Employee} from "./EmployeeInterface";
 import {EmployeeDataManagerServiceService} from "./services/employee-data-manager-service.service";
@@ -12,7 +12,7 @@ import {EmployeeDataManagerServiceService} from "./services/employee-data-manage
 export class EmployeeRegisterComponent implements OnInit {
 
   buttonStatus: string | undefined = 'buttonDisabled'
-  form
+  form: FormGroup
   currentEmployee: Employee | null = null
 
   constructor(private fb: FormBuilder, private employeeDataManagerService: EmployeeDataManagerServiceService) {

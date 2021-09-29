@@ -1,0 +1,20 @@
+<h1 style="text-align: center">Find Employee</h1>
+<div class="main-form-container">
+  <form class="register-form" [autocomplete]="false">
+    <label class='required'>
+      ID:
+      <input [formControl]="search" type="number" placeholder="Put ID" required>
+    </label>
+    <button (click)="searchEmployee(search.value)" [className]="buttonStatus" [disabled]="buttonStatus!='buttonEnabled'">Search</button>
+  </form>
+  <div class="user" *ngIf="personFound">
+    <h1>Employee {{personFound.id}}</h1>
+    <ul>
+      <li>ID: <span>{{personFound.id}}</span></li>
+      <li>Name: <span>{{personFound.name}}</span></li>
+      <li>Salary: <span>{{personFound.salary}}</span></li>
+      <li>Age: <span>{{personFound.age}}</span></li>
+    </ul>
+  </div>
+  <p class="error" *ngIf="!personFound">No Employee found with this ID</p>
+</div>

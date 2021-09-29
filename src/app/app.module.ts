@@ -11,6 +11,7 @@ import { ObservablesComponent } from './observables/observables.component';
 import { ObservablesCurrencyExchangeFormarrayComponent } from './observables/observables-currency-exchange-formarray/observables-currency-exchange-formarray.component';
 import { EmployeeRegisterComponent } from './employee-register/employee-register.component';
 import { EmployeeListComponent } from './employee-register/employee-list/employee-list.component';
+import { FindEmployeeComponent } from './employee-register/find-employee/find-employee.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EmployeeListComponent } from './employee-register/employee-list/employe
     ObservablesComponent,
     ObservablesCurrencyExchangeFormarrayComponent,
     EmployeeRegisterComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    FindEmployeeComponent
   ],
   imports: [
     BrowserModule,
