@@ -14,6 +14,10 @@ export class PaginationComponent implements OnInit {
 
   constructor(private employeeDataManagerServiceService: EmployeeDataManagerServiceService) { }
 
+  get getActivePage(){
+    return this.employeeDataManagerServiceService.activePage
+  }
+
   changePage(page: number){
     this.employeeDataManagerServiceService.changeActivePage(page)
   }
