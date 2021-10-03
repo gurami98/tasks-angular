@@ -12,6 +12,7 @@ import { ObservablesCurrencyExchangeFormarrayComponent } from './observables/obs
 import { EmployeeRegisterComponent } from './employee-register/employee-register.component';
 import { EmployeeListComponent } from './employee-register/employee-list/employee-list.component';
 import { FindEmployeeComponent } from './employee-register/find-employee/find-employee.component';
+import { PaginationComponent } from './employee-register/employee-list/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FindEmployeeComponent } from './employee-register/find-employee/find-em
     ObservablesCurrencyExchangeFormarrayComponent,
     EmployeeRegisterComponent,
     EmployeeListComponent,
-    FindEmployeeComponent
+    FindEmployeeComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

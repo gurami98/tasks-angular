@@ -14,7 +14,7 @@ export class EmployeeListComponent implements OnInit {
   @Output() currentEmployeeChange: EventEmitter<Employee | null> = new EventEmitter<Employee | null>();
 
   get employeesList(): Employee[] {
-    return this.employeeDataManagerServiceService.data;
+    return this.employeeDataManagerServiceService.data?.slice(this.employeeDataManagerServiceService.startIndex, this.employeeDataManagerServiceService.endIndex);
   }
 
   constructor(private employeeDataManagerServiceService: EmployeeDataManagerServiceService) { }

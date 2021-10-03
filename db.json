@@ -25,10 +25,40 @@
       "id": 4
     },
     {
+      "name": "new",
+      "age": 11,
+      "salary": 123,
+      "id": 5
+    },
+    {
       "name": "1",
       "age": 1,
       "salary": 1,
-      "id": 5
+      "id": 6
+    },
+    {
+      "name": "1",
+      "age": 1,
+      "salary": 1,
+      "id": 7
+    },
+    {
+      "name": "1",
+      "age": 1,
+      "salary": 1,
+      "id": 8
+    }
+  ],
+  "users": [
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$dUPDKa510fmyI1Y/TkKHaOV/HF2magg5h3.1xlUCcqQYEATt89wFC",
+      "id": 1
+    },
+    {
+      "email": "newuser@mail.com",
+      "password": "$2a$10$BQuZfA6iyX5WOsA6yCS7g.WD.iSPUke7bGL9TzKFVo6bRtRdj0qeW",
+      "id": 2
     }
   ]
 }
