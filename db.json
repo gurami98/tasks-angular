@@ -13,12 +13,6 @@
       "id": 2
     },
     {
-      "name": "axaliewdit",
-      "age": 11,
-      "salary": 1234,
-      "id": 3
-    },
-    {
       "name": "n",
       "age": 1,
       "salary": 1,
@@ -35,24 +29,6 @@
       "age": 1,
       "salary": 1,
       "id": 6
-    },
-    {
-      "name": "1",
-      "age": 1,
-      "salary": 1,
-      "id": 7
-    },
-    {
-      "name": "1",
-      "age": 1,
-      "salary": 1,
-      "id": 8
-    },
-    {
-      "name": "321",
-      "age": 31,
-      "salary": 312,
-      "id": 9
     }
   ],
   "users": [
