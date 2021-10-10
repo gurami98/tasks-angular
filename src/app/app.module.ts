@@ -13,6 +13,11 @@ import { EmployeeRegisterComponent } from './employee-register/employee-register
 import { EmployeeListComponent } from './employee-register/employee-list/employee-list.component';
 import { FindEmployeeComponent } from './employee-register/find-employee/find-employee.component';
 import { PaginationComponent } from './employee-register/employee-list/pagination/pagination.component';
+import {RouterModule} from "@angular/router";
+import { LoginComponent } from './login/login.component';
+import {LoginGuard} from "./login.guard";
+import { HeaderComponent } from './header/header.component';
+import {LogoutGuard} from "./logout.guard";
 
 @NgModule({
   declarations: [
@@ -25,13 +30,42 @@ import { PaginationComponent } from './employee-register/employee-list/paginatio
     EmployeeRegisterComponent,
     EmployeeListComponent,
     FindEmployeeComponent,
-    PaginationComponent
+    PaginationComponent,
+    LoginComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        redirectTo: 'login',
+        pathMatch: 'full'
+      },
+      {
+        path: 'login',
+        component: LoginComponent,
+        canActivate: [LogoutGuard]
+      },
+      {
+        path: 'users',
+        component: RegisterFormComponent,
+        canActivate: [LoginGuard]
+      },
+      {
+        path: 'currency',
+        component: ObservablesComponent,
+        canActivate: [LoginGuard]
+      },
+      {
+        path: 'employees',
+        component: EmployeeRegisterComponent,
+        canActivate: [LoginGuard]
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

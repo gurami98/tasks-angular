@@ -15,10 +15,8 @@
       <li>Website: <span>{{user.website}}</span></li>
     </ul>
     <div class="user-actions">
-      <button class="edit-btn" (click)="editUser(user.id)">Edit</button>
-      <button class="delete-btn" (click)="deleteUser(user.id)">Delete</button>
+      <button class="edit-btn" (click)="editUser(user.id)" *ngIf="user.id == loggedPersonID">Edit</button>
+      <button class="delete-btn" (click)="deleteUser(user.id)" *ngIf="user.id == loggedPersonID">Delete</button>
     </div>
   </div>
-
-
 </div>

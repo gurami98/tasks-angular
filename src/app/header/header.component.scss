@@ -1,0 +1,43 @@
+.header-container{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2794BD;
+  & .nav-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    & li{
+      padding: 16px 10px;
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+      list-style: none;
+      &:hover{
+        background-color: #361bd5;
+      }
+    }
+  }
+
+  & button{
+    background-color: transparent;
+    cursor: pointer;
+    height: 100%;
+    border: 0;
+    color: white;
+    &:hover{
+      background-color: #361bd5;
+    }
+  }
+}
+
+.activeLink{
+  background-color: #361bd5;
+}

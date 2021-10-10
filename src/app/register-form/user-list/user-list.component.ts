@@ -12,11 +12,14 @@ export class UserListComponent implements OnInit {
   @Input() scrollEl: any;
   @Output() currentPersonChange: EventEmitter<Person | null> = new EventEmitter<Person | null>();
 
+  loggedPersonID: number | string | null = null;
   get usersList(): Person[] {
     return this.userDataManagerService.data;
   }
 
-  constructor(private userDataManagerService: UserDataManagerServiceService) { }
+  constructor(private userDataManagerService: UserDataManagerServiceService) {
+    this.loggedPersonID = localStorage.getItem('id')
+  }
 
   deleteUser(id: number) {
     let person = this.usersList.filter(user => user.id === id)[0];
