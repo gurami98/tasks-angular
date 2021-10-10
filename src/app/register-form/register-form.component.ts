@@ -30,8 +30,8 @@ export class RegisterFormComponent implements OnInit {
   }
 
   handleCurrentPersonChange(person: Person | null) {
-    this.currentPerson = person
-    this.form.patchValue(person as unknown as any)
+    this.currentPerson = <Person>{...person, password: person?.confirmPassword}
+    this.form.patchValue(this.currentPerson as unknown as any)
     this.currentPerson && this.form.get('agreement')?.disable();
     this.buttonStatus = 'buttonEnabled'
   }

@@ -45,14 +45,42 @@
   ],
   "users": [
     {
-      "email": "olivier@mail.com",
-      "password": "$2a$10$dUPDKa510fmyI1Y/TkKHaOV/HF2magg5h3.1xlUCcqQYEATt89wFC",
+      "email": "chillin@gmail.com",
+      "password": "$2a$10$DgXyMUvBivHXA2gMCI8bUOw4t2mm7bvrpYaftoo7EToZ6Czdk7WBq",
+      "confirmPassword": "1234567",
+      "nickname": "chillin220",
+      "phone": "+380123456789",
+      "website": "website.com",
       "id": 1
     },
     {
-      "email": "newuser@mail.com",
-      "password": "$2a$10$BQuZfA6iyX5WOsA6yCS7g.WD.iSPUke7bGL9TzKFVo6bRtRdj0qeW",
+      "email": "test@gmail.com",
+      "password": "$2a$10$e/nIXcCq6IlGuAC3NDGH6eIkb8RGSGLyoouUp5muiXuDFz/CIKk.q",
+      "confirmPassword": "1234567",
+      "nickname": "nicenicknamebro",
+      "phone": "+380123456789",
+      "website": "website.com",
       "id": 2
+    },
+    {
+      "email": "chilindrishviligurami@gmail.com",
+      "password": "$2a$10$UN0s8tL6HGGgjjdpbx1kN.zhSmjEYERvejF9rKWl22a6gEMGMAjHe",
+      "confirmPassword": "1234567",
+      "nickname": "123",
+      "phone": "+380123456789",
+      "website": "web.ge",
+      "agreement": true,
+      "id": 3
+    },
+    {
+      "email": "cccc@gmail.com",
+      "password": "$2a$10$JzSQ0rvososqyueKXk3UuerkZtZnkmdHgBSrQxrEoSnHMdDiq7uHy",
+      "confirmPassword": "1234567",
+      "nickname": "123",
+      "phone": "+380123456789",
+      "website": "webddd.ge",
+      "agreement": true,
+      "id": 4
     }
   ]
 }
