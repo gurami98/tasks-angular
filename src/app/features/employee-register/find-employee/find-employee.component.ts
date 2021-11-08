@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, Validators} from "@angular/forms";
 import {tap} from "rxjs/operators";
 import {EmployeeDataManagerServiceService} from "../services/employee-data-manager-service.service";
-import {Employee} from "../EmployeeInterface";
+import {Employee} from "../models/Employee.model";
 
 @Component({
   selector: 'app-find-employee',

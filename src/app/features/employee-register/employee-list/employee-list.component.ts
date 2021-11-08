@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Employee} from "../EmployeeInterface";
+import {Employee} from "../models/Employee.model";
 import {EmployeeDataManagerServiceService} from "../services/employee-data-manager-service.service";
 
 @Component({

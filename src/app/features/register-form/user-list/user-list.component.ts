@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Person} from "../PersonInterface";
+import {Person} from "../models/Person.model";
 import {UserDataManagerServiceService} from "../services/user-data-manager-service.service";
 
 @Component({

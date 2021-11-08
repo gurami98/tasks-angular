@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {tap} from "rxjs/operators";
-import {Employee} from "./EmployeeInterface";
+import {Employee} from "./models/Employee.model";
 import {EmployeeDataManagerServiceService} from "./services/employee-data-manager-service.service";
 
 @Component({

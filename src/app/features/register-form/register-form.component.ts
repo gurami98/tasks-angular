@@ -2,8 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, Validators} from "@angular/forms";
 import {tap} from "rxjs/operators";
 import {UserDataManagerServiceService} from "./services/user-data-manager-service.service";
-import {Person} from "./PersonInterface";
+import {Person} from "./models/Person.model";
 import {PasswordMatchValidatorServiceService} from "./services/password-match-validator-service.service";
+import {AuthService} from "../../auth/services/auth.service";
 
 @Component({
   selector: 'app-register-form',
@@ -15,7 +16,7 @@ export class RegisterFormComponent implements OnInit {
   form
   currentPerson: Person | null = null
 
-  constructor(private fb: FormBuilder, private userDataManagerService: UserDataManagerServiceService, private passwordMatchService: PasswordMatchValidatorServiceService) {
+  constructor(private fb: FormBuilder, private userDataManagerService: UserDataManagerServiceService, private passwordMatchService: PasswordMatchValidatorServiceService, private authService: AuthService) {
     this.form = this.fb.group({
       email: ['', [Validators.required, Validators.pattern('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$')]],
       password: ['', [Validators.required, Validators.pattern('[A-Za-z0-9]+$'), Validators.minLength(7)]],

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {Person} from "../PersonInterface";
-import {environment} from "../../../environments/environment";
+import {Person} from "../models/Person.model";
+import {environment} from "../../../../environments/environment";
 import {HttpClient} from "@angular/common/http";
 
 @Injectable({
