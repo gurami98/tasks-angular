@@ -4,7 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {debounceTime, tap} from "rxjs/operators";
 
 const API_URL = 'https://api.fastforex.io'
-const API_KEY = 'api_key=2f562a17e1-3e1a4b24a0-qznkk6'
+const API_KEY = 'api_key=1cf147dcb1-d2f79588bb-r2df8i'
 
 @Component({
   selector: 'app-observables-currency-exchange-formarray',

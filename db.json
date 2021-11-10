@@ -86,6 +86,16 @@
       "password": "$2a$10$GKEMEKk6yFf8SOW7gvfh7erSj0shICfs/xOUe3Wq//JbRlBL35iA.",
       "nickname": "admin",
       "id": 6
+    },
+    {
+      "email": "aba@gmail.com",
+      "password": "$2a$10$Q2LVIPwJXsKu5RMYi.drSOqzhXQ4gadsMfIxcvI3TNHA.7Q93edBW",
+      "confirmPassword": "1234567",
+      "nickname": "nick",
+      "phone": "+380123456789",
+      "website": "mevar.ge",
+      "agreement": true,
+      "id": 7
     }
   ]
 }
