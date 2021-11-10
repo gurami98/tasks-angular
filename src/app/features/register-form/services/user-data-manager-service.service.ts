@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import {Person} from "../models/Person.model";
 import {environment} from "../../../../environments/environment";
 import {HttpClient} from "@angular/common/http";
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserDataManagerServiceService {
   data: Person[] | any = []
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     try {
       this.http.get(`${environment.api}/users`).subscribe(resp => {
         this.data = resp
@@ -22,6 +23,7 @@ export class UserDataManagerServiceService {
     try {
       this.http.post(`${environment.api}/users`, person).subscribe((resp: any) => {
         this.data.push(resp.user)
+        this.router.navigate(['login']).then()
       })
     }catch (e){
       alert(e.message)
