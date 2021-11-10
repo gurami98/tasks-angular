@@ -1,0 +1,12 @@
+<div class="login-container">
+  <form class="login-form">
+    <label for="username">Username: </label>
+    <input type="text" id='username' name='username' [formControl]="nickname"/>
+    <label for="email">Email: </label>
+    <input type="email" id='email' name='email' [formControl]="email"/>
+    <label for="password">Password: </label>
+    <input type="password" id='password' name='password' [formControl]="password"/>
+    <button (click)="register()">Register</button>
+    <span>Already Registered ? <a routerLink='/login'>Login</a> </span>
+  </form>
+</div>

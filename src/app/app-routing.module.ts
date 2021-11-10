@@ -4,6 +4,7 @@ import {CommonModule} from "@angular/common";
 import {LoginComponent} from "./auth/login/login.component";
 import {LogoutGuard} from "./auth/guards/logout.guard";
 import {LoginGuard} from "./auth/guards/login.guard";
+import {RegisterComponent} from "./auth/register/register.component";
 
 const routes: Routes = [
   {
@@ -14,6 +15,11 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+    canActivate: [LogoutGuard]
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
     canActivate: [LogoutGuard]
   },
   {

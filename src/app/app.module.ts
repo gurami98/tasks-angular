@@ -9,12 +9,14 @@ import {AppRoutingModule} from "./app-routing.module";
 import {AuthModule} from "./auth/auth.module";
 import {FeaturesModule} from "./features/features.module";
 import {LoginComponent} from "./auth/login/login.component";
+import {RegisterComponent} from "./auth/register/register.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
