@@ -80,6 +80,12 @@
       "phone": "+380123456789",
       "website": "website.com",
       "id": 5
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$tQDe2.4cL1MD2I5fYK2YsO4FqbUuuvELbPgHS/kLPo/yg.yiUE842",
+      "nickname": "admin",
+      "id": 6
     }
   ]
 }
